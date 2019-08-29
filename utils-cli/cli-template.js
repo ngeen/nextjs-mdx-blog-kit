@@ -4,14 +4,14 @@ const reactImport = `import { Component } from "react";`;
 const markdownImport = (type = "post") =>
     `import BlogMeta from "${
         type === "post" ? "../../" : "../"
-    } components/BlogMeta";`;
+    }components/BlogMeta";`;
 /* prettier-ignore */
 const mardownContent = () => 
 `export const meta = {
     title: "MDX Page",
     // the first tag below will be used in <meta property="article:tag" content="first-tag" />
     tags: ["tag-1", "tag-2"], 
-    layout: "blog-layout",
+    layout: "post",
     publishDate: "2011-01-01",
     modifiedDate: false, // "If used it must be in 'YYYY-MM-DD format' like publishDate"
     seoDescription: "In this post I <keyword> with <keyword>. And blah blah.",
