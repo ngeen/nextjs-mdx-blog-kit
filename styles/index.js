@@ -189,4 +189,8 @@ export const globalStyles = css.global`
          blockquote em {
            font-style: italic;
          }
+
+         .footer {
+           padding: 0.5rem 0.5rem 0.5rem;
+         }
        `;
