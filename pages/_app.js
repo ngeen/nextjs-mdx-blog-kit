@@ -8,13 +8,12 @@ import BlogEngine from "../utils/blog-engine";
 import { renderLayout } from "../utils/render-app-layout";
 import Footer from "../components/Footer";
 import { checkForSW } from "../utils/check-for-sw";
-import { FaBars } from "react-icons/fa";
 import { globalStyles } from "../styles";
 
 export default class MyApp extends App {
     constructor(props) {
         super(props);
-        this.state = { navOpen: false, postData: props.postData };
+        this.state = { postData: props.postData };
     }
 
     static async getInitialProps({ Component, router, ctx }) {
@@ -50,58 +49,38 @@ export default class MyApp extends App {
         }
     }
 
-    handleToggleNavigation = () => {
-        this.setState({
-            navOpen: !this.state.navOpen
-        });
-    };
-
     render() {
         const { postData } = this.state;
-
         const seoData = createSEOConfig(postData);
         if (postData) {
             const tagsString = postData.tags.join(", ");
+            const footer = !postData.footer;
             return (
-                <Container>
-                    {/* (1) SEO  */}
-                    <Head>
-                        <meta name="keywords" content={tagsString} />
-                    </Head>
-                    <NextSeo config={seoData} />
+              <Container>
+                {/* (1) SEO  */}
+                <Head>
+                  <meta name="keywords" content={tagsString} />
+                </Head>
+                <NextSeo config={seoData} />
 
-                    {/* (2) navigation */}
-                    <Navigation
-                        open={this.state.navOpen}
-                        toggleNavigation={this.handleToggleNavigation}
-                    />
-                    <button
-                        type="button"
-                        role="button"
-                        aria-label="open navigation"
-                        className="icon-button hamburger"
-                        onClick={this.handleToggleNavigation}>
-                        <FaBars size={20} />
-                    </button>
+                {/* (2) navigation */}
+                <Navigation />
 
-                    {/* (3) page body */}
-                    <React.Fragment>
-                        {renderLayout(this.props, this.state)}
-                    </React.Fragment>
+                {/* (3) page body */}
+                <div className="content">
+                  <React.Fragment>
+                    {renderLayout(this.props, this.state)}
+                  </React.Fragment>
+                </div>
 
-                    {/* (4) footer */}
-                    <Footer />
+                {/* (4) footer */}
+                {footer && <Footer />}
 
-                    {/* (5) global and local styles */}
-                    <style global jsx>
-                        {globalStyles}
-                    </style>
-                    <style jsx>{`
-                        .icon-button {
-                            margin: 15px;
-                        }
-                    `}</style>
-                </Container>
+                {/* (5) global and local styles */}
+                <style global jsx>
+                  {globalStyles}
+                </style>
+              </Container>
             );
         } else {
             return null;

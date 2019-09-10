@@ -63,7 +63,9 @@ export default class MyDocument extends Document {
                 name="msapplication-TileImage"
                 content="/static/icons/icon_150.png"
               />
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+              <link rel="stylesheet" href="/static/css/bulma.min.css" />
+
+              <link rel="stylesheet" href="/static/vendor/fontawesome/css/all.min.css" />
               {/* 
                     <script>
                          Add a Google Analytics script here.

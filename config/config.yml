@@ -5,6 +5,7 @@ config:
     defaultPageTitle: Add a default page title here
     blogTitle: Blog
     baseUrl: base url of your site here (e.g. www.mysite.com)
+    profilePhoto: ../static/images/profile.jpg
 
     # For Twitter cards, this logo must be a hosted url, not a relative path.
     # Must be square. Minimum size is 144x144; maximum size 4096x4096.
