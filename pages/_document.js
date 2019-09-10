@@ -65,7 +65,19 @@ export default class MyDocument extends Document {
               />
               <link rel="stylesheet" href="/static/css/bulma.min.css" />
 
-              <link rel="stylesheet" href="/static/vendor/fontawesome/css/all.min.css" />
+              <link
+                rel="stylesheet"
+                href="/static/vendor/fontawesome/css/all.min.css"
+              />
+
+              <link
+                rel="stylesheet"
+                href="/static/vendor/devicons/css/devicons.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="/static/vendor/devicon/devicon.min.css"
+              />
               {/* 
                     <script>
                          Add a Google Analytics script here.

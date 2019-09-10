@@ -100,4 +100,24 @@ export const globalStyles = css.global`
            margin-top: 1em;
            margin-bottom: 6em;
          }
+
+         .list-icons {
+           font-size: 3rem;
+         }
+
+         .list-icons .list-inline-item i:hover {
+           color: #bd5d38;
+         }
+
+         .list-inline {
+           list-style-type: none;
+           margin-left: 0px !important;
+           margin-top: 0px !important;
+         }
+
+         .list-inline-item {
+           display: inline-block;
+           margin-left: 10px;
+           margin-top: 0px;
+         }
        `;
