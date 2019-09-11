@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Link from "next/link";
-import { FaTimes } from "react-icons/fa";
-import { config } from "../config/config.yml";
+import { initGA, logPageView } from "../utils/analytics";
 
 export default class Navigation extends Component {
                  state = { navOpen: false };
@@ -11,6 +9,14 @@ export default class Navigation extends Component {
                      navOpen: !this.state.navOpen
                    });
                  };
+
+                 componentDidMount() {
+                   if (!window.GA_INITIALIZED) {
+                     initGA();
+                     window.GA_INITIALIZED = true;
+                   }
+                   logPageView();
+                 }
 
                  render() {
                    // there is a click handler on div.backdrop to close the
@@ -53,7 +59,10 @@ export default class Navigation extends Component {
                              </span>
                              <span>Blog</span>
                            </a>
-                           <a className="navbar-item" href="mailto:info@oenginoz.com">
+                           <a
+                             className="navbar-item"
+                             href="mailto:info@oenginoz.com"
+                           >
                              <span className="icon">
                                <i className="fas fa-envelope"></i>
                              </span>

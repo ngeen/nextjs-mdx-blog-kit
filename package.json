@@ -38,6 +38,7 @@
         "react": "^16.8.2",
         "react-anchor-link-smooth-scroll": "^1.0.11",
         "react-dom": "^16.8.2",
+        "react-ga": "^2.6.0",
         "react-icons": "^3.2.2",
         "react-syntax-highlighter": "^9.0.1",
         "remark-emoji": "^2.0.2",
