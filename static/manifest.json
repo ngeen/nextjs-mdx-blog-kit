@@ -1,7 +1,7 @@
 {
-    "name": "Next.js MDX Static Blog Kit",
-    "short_name": "Blog Kit",
-    "description": "A starter kit for creating a static blog using Next.js and MDX.",
+    "name": "Omer Engin OZ Software Consulting",
+    "short_name": "Software & IT Consulting",
+    "description": "Omer Engin OZ Software & IT Consulting and Blogging page.",
     "display": "standalone",
     "orientation": "portrait",
     "start_url": "/",

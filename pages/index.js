@@ -42,22 +42,6 @@ export default class Index extends Component {
                 <br />
                 <ul>
                   <li>
-                    <a href="mailto:info@oenginoz.com" target="_blank">
-                      <span className="fa-stack fa-2x">
-                        <i className="fas fa-circle fa-stack-2x st-rss"></i>
-                        <i className="fas fa-rss fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:info@oenginoz.com" target="_blank">
-                      <span className="fa-stack fa-2x">
-                        <i className="fas fa-circle fa-stack-2x st-envelope"></i>
-                        <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
                     <a href="https://twitter.com/ngeeen" target="_blank">
                       <span className="fa-stack fa-2x">
                         <i className="fas fa-circle fa-stack-2x st-twitter"></i>
@@ -81,6 +65,14 @@ export default class Index extends Component {
                       <span className="fa-stack fa-2x">
                         <i className="fas fa-circle fa-stack-2x st-github"></i>
                         <i className="fab fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:info@oenginoz.com" target="_blank">
+                      <span className="fa-stack fa-2x">
+                        <i className="fas fa-circle fa-stack-2x st-envelope"></i>
+                        <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
                       </span>
                     </a>
                   </li>
