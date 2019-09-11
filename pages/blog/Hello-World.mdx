@@ -1,0 +1,31 @@
+import BlogMeta from "../../components/BlogMeta";
+
+export const meta = {
+    title: "Hello World",
+    // the first tag below will be used in <meta property="article:tag" content="first-tag" />
+    tags: ["next.js", "mdx", "mdx-blog", "javascript", "react", "css"], 
+    layout: "post",
+    publishDate: "2019-09-11",
+    modifiedDate: false, // "If used it must be in 'YYYY-MM-DD format' like publishDate"
+    seoDescription: "In this post, I am giving a source code of this web page to my visitors.",
+    exclude: false,
+    hideProgressBar: false,
+}
+
+<BlogMeta data={props} />
+
+Every developer knows that what is the meaning of "Hello world". So that I want to start blogging like that.
+
+In this first article, you can find the heart of this web app. Yes, you didn't hear wrongly, I said web app. Because the webpage which you are reading now is a PWA. So you can get a shortcut of this page to the homepage of your mobile phone and you can look at in offline mode.
+
+You can look at this web app's source code from;
+https://github.com/ngeen/nextjs-mdx-blog-kit
+
+This is a modified version of nextjs-mdx-blog-kit project. I added [Bulma](https://bulma.io) Css library, [Devicons](https://konpa.github.io/devicon/) and [Fontawesome](https://fontawesome.com) icon libraries to that project. You can take a look at those libraries by clicking on links. 
+
+And if you need the original project, you can find it from;
+https://github.com/lorenseanstewart/nextjs-mdx-blog-kit
+
+When I forked this project from the original there was a little bug about creating a page or post. If the problem continues when you forked from the original you can fix the problem by editing cli-template.js. On line 7, you have to remove space between "}" and "components". It is the cause of the problem.
+
+Hope to see you in the next articles.

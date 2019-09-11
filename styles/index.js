@@ -35,7 +35,7 @@ export const globalStyles = css.global`
          .blog-layout,
          .blog-post-list {
            max-width: 740px;
-           padding: 40px 20px 100px 20px;
+           padding: 60px 20px 100px 20px;
            position: relative;
          }
 
