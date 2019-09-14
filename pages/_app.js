@@ -9,6 +9,7 @@ import { renderLayout } from "../utils/render-app-layout";
 import Footer from "../components/Footer";
 import { checkForSW } from "../utils/check-for-sw";
 import { globalStyles } from "../styles";
+import { useRouter } from "next/router";
 
 export default class MyApp extends App {
     constructor(props) {
@@ -16,23 +17,23 @@ export default class MyApp extends App {
         this.state = { postData: props.postData };
     }
 
-    static async getInitialProps({ Component, router, ctx }) {
+    static async getInitialProps( ctx ) {
         let pageProps = {};
+        let router = ctx.router;
 
-        if (Component.getInitialProps) {
-            pageProps = await Component.getInitialProps(ctx);
-        }
 
+        pageProps = await App.getInitialProps(ctx);
+        
         const [allData, postData] = await Promise.all([
-            BlogEngine(),
-            getPostData(router)
+          BlogEngine(),
+          getPostData(router)
         ]).catch(error =>
-            console.error("Error in _app.js getInitialProps()", error)
+          console.error("Error in _app.js getInitialProps()", error)
         );
 
         const propsObj = Object.assign(
-            {},
-            { router, postData, allData, ...pageProps }
+          {},
+          { ...router, postData, allData, ...pageProps }
         );
 
         return { ...propsObj };

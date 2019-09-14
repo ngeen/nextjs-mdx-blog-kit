@@ -42,6 +42,14 @@ export default class Index extends Component {
                 <br />
                 <ul>
                   <li>
+                    <a href="/feed.json" target="_blank">
+                      <span className="fa-stack fa-2x">
+                        <i className="fas fa-circle fa-stack-2x st-rss"></i>
+                        <i className="fas fa-rss fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
                     <a href="https://twitter.com/ngeeen" target="_blank">
                       <span className="fa-stack fa-2x">
                         <i className="fas fa-circle fa-stack-2x st-twitter"></i>
