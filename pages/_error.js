@@ -21,16 +21,18 @@ class Error extends React.Component {
         <section className="hero is-medium is-info is-bold is-fullheight is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <span className="shadow">404</span> <br />
-              The page you have sought can not be reached at the moment. Please
-              try again later. <br />
-              <span className="emoji">😀 😁 😂 🤣 😃 😄 😅 😆 😉</span>
+              <div className="shadow">404</div>
+              <div className="description">
+                The page you have sought can not be reached at the moment.
+                Please try again later.
+              </div>
+              <div className="emoji">😀 😁 😂 🤣 😃 😄 😅 😆 😉</div>
             </div>
           </div>
           <style jsx>{`
             .shadow {
               color: #e0dfdc;
-              font-size: 11em;
+              font-size: 17vw;
               letter-spacing: 0.2em;
               text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
                 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626,
@@ -40,19 +42,12 @@ class Error extends React.Component {
                 0 22px 30px rgba(0, 0, 0, 0.9);
             }
 
-            img.emojione {
-              // Override any img styles to ensure Emojis are displayed inline
-              margin: 0px !important;
-              display: inline !important;
-
-              height: auto;
-              width: 50px;
+            .description {
+              font-size: 2vw;
             }
 
-            span.emoji {
-              font-size: 50px;
-              vertical-align: middle;
-              line-height: 2;
+            .emoji {
+              font-size: 4vw;
             }
           `}</style>
         </section>
